@@ -1,0 +1,3 @@
+module Nip
+  # Your code goes here...
+end
