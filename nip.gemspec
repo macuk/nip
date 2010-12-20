@@ -1,16 +1,16 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "nip/version"
+require "version"
 
 Gem::Specification.new do |s|
   s.name        = "nip"
   s.version     = Nip::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Piotr Macuk"]
+  s.email       = ["piotr@macuk.pl"]
+  s.homepage    = "http://github.com/macuk/nip"
+  s.summary     = %q{NIP validation}
+  s.description = %q{Nip class to check NIP number}
 
   s.rubyforge_project = "nip"
 

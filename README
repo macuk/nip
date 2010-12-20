@@ -1,0 +1,41 @@
+Nip
+===
+
+This gem provides the Nip class to check the NIP number.
+
+NIP (Numer Identyfikacji Podatkowej) is the Polish Tax Identification Number. 
+
+More information (in Polish language):
+http://pl.wikipedia.org/wiki/NIP
+
+If you are looking for the Nip as a plugin:
+http://github.com/macuk/nip-plugin
+
+Installation
+============
+
+gem install nip
+
+Example
+=======
+
+Standalone class:
+
+  nip = Nip.new('845-167-08-82')
+  nip.valid?  # true
+  nip.to_s    # '8451670882'
+
+ActiveRecord:
+
+  class Company < ActiveRecord::Base
+    validate :check_nip
+
+    private
+      def check_nip
+        n = Nip.new(nip)
+        errors[:nip] << 'Invalid NIP number' unless n.valid?
+      end
+  end
+
+
+Copyright (c) 2010 Piotr Macuk, released under the MIT license
